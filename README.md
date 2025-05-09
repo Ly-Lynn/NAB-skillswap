@@ -25,6 +25,37 @@ NAB SkillSwap is a web application built with the MERN stack (MongoDB, Express, 
 </p>
 </header>
 
+# 🌟 Personal Contribution (Lynn)
+## Backend
+<p align="center">
+  <img src="./public/contribution.jpg" alt="Contribution statistics" width="600" />
+</p>
+
+### Key Contributions:
+- ✅ Developed over 80% of the project backend core
+- 🔐 Built authentication system with JWT and token rotation using Redis
+
+<p align="center">
+<img src="./public/authen-components.png" alt="Authentication components" width="400" />
+  <img src="./public/authen.png" alt="Authentication diagram" width="400" />
+</p>
+
+- 🔄 Implemented OAuth2 for Google Authentication
+- 💾 Designed database/models and configured MongoDB Atlas
+- ⚡ Configured Redis (used for blacklisting tokens)
+- 🐳 Managed Docker and Docker compose
+- 🚀 Deployed containerized application on GCP (Google Cloud Platform) CloudRun
+
+#### Deploy Demo link: [SkillSwap Application](https://skillswap-117849673427.asia-southeast1.run.app/home)
+
+## Frontend
+- 🔧 Configured Nginx
+- 🎨 Created user-friendly interface for login, signup and logout features
+- 🎨 Created user-friendly interface for getting user information about their preferences
+- Applying debounce for searching & filtering (as mentioned in <a href="#realtime-search-issue">Search function documentation</a>)
+
+https://github.com/user-attachments/assets/759b6ba1-d090-4e87-bcfe-8540506ce8b4
+
 # 🚩 Table of contents
 
 - [Installation](#installation)
@@ -108,38 +139,6 @@ GOOGLE_CALLBACK_URL=<your-google-callback-url>
 - Resources Page: Reference sources for learning and skill sharing
 
 - Data Security & Privacy: Encrypted passwords and secure data handling.
-
-# 🌟 Personal Contribution (Lynn)
-## Backend
-<p align="center">
-  <img src="./public/contribution.jpg" alt="Contribution statistics" width="600" />
-</p>
-
-### Key Contributions:
-- ✅ Developed over 80% of the project backend core
-- 🔐 Built authentication system with JWT and token rotation using Redis
-
-<p align="center">
-<img src="./public/authen-components.png" alt="Authentication components" width="300" />
-  <img src="./public/authen.png" alt="Authentication diagram" width="300" />
-</p>
-
-- 🔄 Implemented OAuth2 for Google Authentication
-- 💾 Designed database/models and configured MongoDB Atlas
-- ⚡ Configured Redis (used for blacklisting tokens)
-- 🐳 Managed Docker and Docker compose
-- 🚀 Deployed containerized application on GCP (Google Cloud Platform) CloudRun
-
-#### Deploy Demo link: [SkillSwap Application](https://skillswap-117849673427.asia-southeast1.run.app/home)
-
-## Frontend
-- 🔧 Configured Nginx
-- 🎨 Created user-friendly interface for login, signup and logout features
-- 🎨 Created user-friendly interface for getting user information about their preferences
-- Applying debounce for searching & filtering (as mentioned in <a href="#realtime-search-issue">Search function documentation below</a>)
-
-https://github.com/user-attachments/assets/759b6ba1-d090-4e87-bcfe-8540506ce8b4
-
 
 # 🔎 Search Function Documentation
 
