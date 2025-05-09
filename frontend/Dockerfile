@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:18-alpine AS build
 
 WORKDIR /app
 
@@ -8,7 +8,20 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+RUN npm run build
 
-CMD ["npm", "start", "--", "--host", "0.0.0.0", "--port", "3000", "--public", "localhost:3001", "--watch-poll"]
-# CMD ["npm", "run", "build"]
+FROM nginx:alpine
+
+# Copy built files from build stage
+COPY --from=build /app/dist /usr/share/nginx/html
+
+# Copy nginx config template
+COPY nginx.conf /etc/nginx/templates/default.conf.template
+
+# Nginx in Alpine uses this env var to substitute variables in template files
+ENV NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx/conf.d
+ENV PORT=8080
+
+EXPOSE 8080
+
+CMD ["nginx", "-g", "daemon off;"]
