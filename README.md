@@ -109,6 +109,37 @@ GOOGLE_CALLBACK_URL=<your-google-callback-url>
 
 - Data Security & Privacy: Encrypted passwords and secure data handling.
 
+# 🌟 Personal Contribution (Lynn)
+## Backend
+<p align="center">
+  <img src="./public/contribution.jpg" alt="Contribution statistics" width="600" />
+</p>
+
+### Key Contributions:
+- ✅ Developed over 80% of the project backend core
+- 🔐 Built authentication system with JWT and token rotation using Redis
+
+<p align="center">
+<img src="./public/authen-components.png" alt="Authentication components" width="300" />
+  <img src="./public/authen.png" alt="Authentication diagram" width="300" />
+</p>
+
+- 🔄 Implemented OAuth2 for Google Authentication
+- 💾 Designed database/models and configured MongoDB Atlas
+- ⚡ Configured Redis (used for blacklisting tokens)
+- 🐳 Managed Docker and Docker compose
+- 🚀 Deployed containerized application on GCP (Google Cloud Platform) CloudRun
+
+#### Deploy Demo link: [SkillSwap Application](https://skillswap-117849673427.asia-southeast1.run.app/home)
+
+## Frontend
+- 🔧 Configured Nginx
+- 🎨 Created user-friendly interface for login, signup and logout features
+- 🎨 Created user-friendly interface for getting user information about their preferences
+
+https://github.com/user-attachments/assets/759b6ba1-d090-4e87-bcfe-8540506ce8b4
+
+
 # 🔎 Search Function Documentation
 
 <a name="search"></a>
@@ -117,7 +148,7 @@ GOOGLE_CALLBACK_URL=<your-google-callback-url>
 
 The list can render simultaneously with user interactions → useEffect is triggered every time the user interacts with the search name or search skills component, automatically calling the API.
 
-→ New issue: continuously calling the API can cause slow rendering, lag, or even “crash” if the user list is too long.
+→ New issue: continuously calling the API can cause slow rendering, lag, or even "crash" if the user list is too long.
 
 → Possible approach: fetch all users once → store them in a variable → filter the list on the frontend.  
 → Drawback: this only works for an MVP, because if the dataset grows too large, the response payload becomes too heavy, slowing down the API call.
@@ -125,7 +156,7 @@ The list can render simultaneously with user interactions → useEffect is trigg
 → Better approach: call the API with input query params, meaning the user types, and the API request includes the query. The response then only includes the filtered/searched data.  
 → But this returns to the original problem of calling the API continuously, now even more frequently due to rapid user interactions.
 
-→ Solution: use **debounce** to space out the API call frequency. In the code, it’s set to 500ms/call — meaning after 500ms, the API will only be called once, regardless of how many times the user types/interacts. It always takes the latest result every 500ms to send the request to the server.
+→ Solution: use **debounce** to space out the API call frequency. In the code, it's set to 500ms/call — meaning after 500ms, the API will only be called once, regardless of how many times the user types/interacts. It always takes the latest result every 500ms to send the request to the server.
 
 **Note (this may come up as a question):** The drawback is similar to the above approach — if scaled to big data, the response can still be too large.  
 A solution here is to apply **pagination** on the backend, so the response only returns a set number of users based on the page selected on the frontend (for example, page 1 only returns the top 10 users).
