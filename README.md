@@ -136,6 +136,7 @@ GOOGLE_CALLBACK_URL=<your-google-callback-url>
 - 🔧 Configured Nginx
 - 🎨 Created user-friendly interface for login, signup and logout features
 - 🎨 Created user-friendly interface for getting user information about their preferences
+- Applying debounce for searching & filtering (as mentioned in <a href="#realtime-search-issue">Search function documentation below</a>)
 
 https://github.com/user-attachments/assets/759b6ba1-d090-4e87-bcfe-8540506ce8b4
 
