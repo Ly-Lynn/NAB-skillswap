@@ -26,10 +26,12 @@ NAB SkillSwap is a web application built with the MERN stack (MongoDB, Express, 
 </header>
 
 # 🌟 Personal Contribution (Lynn)
-## Backend
+
 <p align="center">
   <img src="./public/contribution.jpg" alt="Contribution statistics" width="600" />
 </p>
+
+## Backend
 
 ### Key Contributions:
 - ✅ Developed over 80% of the project backend core
